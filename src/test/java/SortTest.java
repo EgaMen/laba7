@@ -7,75 +7,75 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SortTest {
     @Test
-    void selectionSort_Default_True() {
+    void mergeSort_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.selectionSort(a);
+        sort.mergeSort(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void selectionSortIndex_Default_True() {
+    void mergeSortIndex_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.selectionSort(a,2,5);
+        sort.mergeSort(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
     }
 
     @Test
-    void selectionSortList_Default_True() {
+    void mergeSortList_Default_True() {
         List a = listFabric();
         Sort sort = new Sort();
-        sort.selectionSort(a);
+        sort.mergeSort(a);
         assertEquals(a.toString(),"[a, b, b, c, f, n]");
     }
 
     @Test
-    void insertionSort_Default_True() {
+    void heapSort_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.insertionSort(a);
+        sort.heapSort(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void insertionSortIndex_Default_True() {
+    void heapSortIndex_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.insertionSort(a,2,5);
+        sort.heapSort(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
     }
 
     @Test
-    void insertionSortList_Default_True() {
+    void heapSortList_Default_True() {
         List a = listFabric();
         Sort sort = new Sort();
-        sort.insertionSort(a);
+        sort.heapSort(a);
         assertEquals(a.toString(),"[a, b, b, c, f, n]");
     }
 
     @Test
-    void bubbleSort_Default_True() {
+    void quickSort_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.bubbleSort(a);
+        sort.quickSort(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void bubbleSortIndex_Default_True() {
+    void quickSortIndex_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.bubbleSort(a,2,5);
+        sort.quickSort(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
 
     }
 
     @Test
-    void bubbleSortList_Default_True() {
+    void quickSortList_Default_True() {
         List a = listFabric();
         Sort sort = new Sort();
-        sort.bubbleSort(a);
+        sort.quickSort(a);
         assertEquals(a.toString(),"[a, b, b, c, f, n]");
     }
 
