@@ -5,79 +5,59 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SortTest {
+public class SortTest {
     @Test
-    void mergeSort_Default_True() {
+    void countingSort_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.mergeSort(a);
+        sort.countingSort(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void mergeSortIndex_Default_True() {
+    void countingSortIndex_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.mergeSort(a,2,5);
+        sort.countingSort(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
     }
 
-    @Test
-    void mergeSortList_Default_True() {
-        List a = listFabric();
-        Sort sort = new Sort();
-        sort.mergeSort(a);
-        assertEquals(a.toString(),"[a, b, b, c, f, n]");
-    }
 
     @Test
-    void heapSort_Default_True() {
+    void MSDSort_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.heapSort(a);
+        sort.MSDSort(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void heapSortIndex_Default_True() {
+    void MSDSort_Index_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.heapSort(a,2,5);
+        sort.MSDSort(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
     }
 
-    @Test
-    void heapSortList_Default_True() {
-        List a = listFabric();
-        Sort sort = new Sort();
-        sort.heapSort(a);
-        assertEquals(a.toString(),"[a, b, b, c, f, n]");
-    }
 
     @Test
-    void quickSort_Default_True() {
+    void LSD_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.quickSort(a);
+        sort.LSD(a);
         assertArrayEquals(a,new int[]{1, 2, 3, 13, 24, 34, 56, 56});
     }
 
     @Test
-    void quickSortIndex_Default_True() {
+    void LSD_Index_Default_True() {
         int[] a=arrayFabric();
         Sort sort = new Sort();
-        sort.quickSort(a,2,5);
+        sort.LSD(a,2,5);
         assertArrayEquals(a,new int[]{2, 3, 1, 13, 24, 56, 34, 56});
 
     }
 
-    @Test
-    void quickSortList_Default_True() {
-        List a = listFabric();
-        Sort sort = new Sort();
-        sort.quickSort(a);
-        assertEquals(a.toString(),"[a, b, b, c, f, n]");
-    }
+
 
 
 
